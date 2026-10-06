@@ -1538,10 +1538,10 @@ function PilotForm({ onClose, isModal = false }) {
   }
 
   const fields = [
-    { key: 'fullName',         label: 'Full Name',          type: 'text',  placeholder: 'e.g. Sarah Williams',    auto: 'name' },
-    { key: 'phoneNumber',      label: 'Phone Number',       type: 'tel',   placeholder: 'e.g. 07123 456 789',     auto: 'tel' },
-    { key: 'emailAddress',     label: 'Email Address',      type: 'email', placeholder: 'e.g. sarah@care.co.uk',  auto: 'email' },
-    { key: 'organisationName', label: 'Organisation Name',  type: 'text',  placeholder: 'e.g. Example Care Ltd',  auto: 'organization' },
+    { key: 'fullName',         label: 'Full Name',          type: 'text',  placeholder: '', auto: 'name' },
+    { key: 'phoneNumber',      label: 'Phone Number',       type: 'tel',   placeholder: '', auto: 'tel' },
+    { key: 'emailAddress',     label: 'Email Address',      type: 'email', placeholder: '', auto: 'email' },
+    { key: 'organisationName', label: 'Organisation Name',  type: 'text',  placeholder: '', auto: 'organization' },
   ]
 
   if (submitted) return (
@@ -1588,9 +1588,6 @@ function PilotForm({ onClose, isModal = false }) {
       <button type="submit" className="btn-primary" style={{ width: '100%', height: 50, fontSize: 15, fontWeight: 700 }}>
         Request a Pilot
       </button>
-      <p style={{ textAlign: 'center', fontSize: 12, color: '#94a3b8', marginTop: 14 }}>
-        Your information is stored only in your browser. No data is sent to any server.
-      </p>
       <style>{`@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr !important; } }`}</style>
     </form>
   )
