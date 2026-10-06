@@ -49,18 +49,12 @@ const Icon = ({ name, size = 20, className = '' }) => {
 
 // ─── Logo ────────────────────────────────────────────────────────────────────
 const Logo = ({ dark = false }) => (
-  <div className="flex items-center gap-2.5">
-    <div className="w-8 h-8 rounded-lg flex items-center justify-center shadow-sm"
-      style={{ background: 'linear-gradient(135deg,#157a7f,#0f4e52)' }}>
-      <span style={{ color: '#fff', fontWeight: 800, fontSize: 13, letterSpacing: '-0.02em' }}>RM</span>
-    </div>
-    <span style={{
-      fontSize: 22, fontWeight: 700, letterSpacing: '-0.025em',
-      color: dark ? '#0f172a' : '#ffffff',
-    }}>
-      Remit<span style={{ color: '#1a9ba1' }}>Match</span>
-    </span>
-  </div>
+  <span style={{
+    fontSize: 22, fontWeight: 700, letterSpacing: '-0.025em',
+    color: dark ? '#0f172a' : '#ffffff',
+  }}>
+    Remit<span style={{ color: '#1a9ba1' }}>Match</span>
+  </span>
 )
 
 // ─── NAVBAR ──────────────────────────────────────────────────────────────────
@@ -623,29 +617,17 @@ function About() {
             <h2 className="h2">Built From First-Hand Care and Financial Experience</h2>
           </div>
 
-          <div style={{ background: '#fff', border: '1px solid #e4eaf2', borderRadius: 20, padding: '32px 36px', display: 'flex', gap: 32, alignItems: 'flex-start', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }} className="founder-flex">
-            {/* Avatar */}
-            <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
-              <div style={{
-                width: 88, height: 88, borderRadius: 18,
-                background: 'linear-gradient(135deg,#0d1630,#157a7f)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                boxShadow: '0 8px 24px rgba(21,122,127,0.25)',
-              }}>
-                <span style={{ color: '#fff', fontWeight: 800, fontSize: 26, letterSpacing: '-0.02em' }}>HR</span>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <p style={{ fontWeight: 700, fontSize: 14, color: '#0f172a' }}>Hetal Rokad</p>
-                <p style={{ fontSize: 12, color: '#157a7f', fontWeight: 600 }}>Founder &amp; Managing Director</p>
-              </div>
+          <div style={{ background: '#fff', border: '1px solid #e4eaf2', borderRadius: 20, padding: '36px 40px', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
+            <div style={{ marginBottom: 18 }}>
+              <h3 style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', marginBottom: 4 }}>Hetal Rokad</h3>
+              <p style={{ fontSize: 13, color: '#157a7f', fontWeight: 600 }}>Founder &amp; Managing Director</p>
             </div>
 
-            {/* Bio */}
-            <div style={{ flex: 1 }}>
+            <div>
               <p style={{ fontSize: 15, lineHeight: 1.75, color: '#475569', marginBottom: 20 }}>
                 RemitMatch is founded by Hetal Rokad, whose background combines direct UK care-sector experience with financial-services and business-management expertise. Her professional experience provides an understanding of the operational pressures faced by care providers, while her financial background supports RemitMatch's focus on reconciliation, payment accuracy and financial visibility.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }} className="founder-creds">
                 {[
                   'More than 3 years of UK care-sector experience',
                   'Care Assistant — Helping Hands',
@@ -666,7 +648,7 @@ function About() {
       <style>{`
         @media (max-width: 820px) {
           .about-grid { grid-template-columns: 1fr !important; }
-          .founder-flex { flex-direction: column !important; align-items: flex-start !important; }
+          .founder-creds { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>
